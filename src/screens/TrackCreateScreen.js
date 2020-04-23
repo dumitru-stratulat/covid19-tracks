@@ -1,9 +1,8 @@
 // import '../_mockLocation'
-import React,{useEffect,useState, useContext,useCallback} from 'react'
+import React,{ useContext,useCallback} from 'react'
 import { SafeAreaView,withNavigationFocus } from 'react-navigation'
 import { StyleSheet } from 'react-native'
 import { Text } from 'react-native-elements'
-import { requestPermissionsAsync, watchPositionAsync, Accuracy } from 'expo-location'
 import Map from '../components/Map'
 import {Context as LocationContext } from '../context/LocationContext'
 import useLocation from '../hooks/useLocation'
@@ -19,7 +18,6 @@ const TrackCreateScreen = ({isFocused}) => {
 
     return (
         <SafeAreaView>
-            <Text h3>TrackCreateScreen</Text>
             <Map/>
             {err ? <Text>Enable location services.</Text>: null}
             <TrackForm/>

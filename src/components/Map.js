@@ -1,8 +1,7 @@
 import React, {useContext} from 'react'
-import { View, Text,StyleSheet, ActivityIndicator } from 'react-native'
+import { View,StyleSheet, ActivityIndicator } from 'react-native'
 import MapView,{Polyline,Circle} from 'react-native-maps'
 import { Context as LocationContext} from '../context/LocationContext'
-
 
 const Map = () => {
     const { state:{currentLocation,locations} } = useContext(LocationContext)
@@ -18,7 +17,6 @@ const Map = () => {
                     ...currentLocation.coords,
                     latitudeDelta:0.01,
                     longitudeDelta:0.01
-
                 }}
                 region={{
                     ...currentLocation.coords,
@@ -29,14 +27,9 @@ const Map = () => {
                 <Polyline
                     coordinates={locations.map(loc=>loc.coords)}
                     strokeColors={[
-                        '#7F0000',
-                        '#00000000', // no color, creates a "long" gradient between the previous and next coordinate
-                        '#B24112',
-                        '#E5845C',
-                        '#238C23',
-                        '#7F0000'
+                        '#000000'
                     ]}
-                    strokeWidth={6}
+                    strokeWidth={4}
                 />
                 <Circle
                     center={currentLocation.coords}

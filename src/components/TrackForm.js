@@ -1,10 +1,9 @@
 import React,{useContext} from 'react'
-import { View, Text } from 'react-native'
+import { View } from 'react-native'
 import { Input,Button } from 'react-native-elements'
 import Spacer from './Spacer'
 import { Context as LocationContext } from '../context/LocationContext'
 import useSaveTrack from '../hooks/useSaveTrack'
-
 
 const TrackForm = () => {
     const {state: {name,recording,locations},
@@ -13,7 +12,6 @@ const TrackForm = () => {
         changeName } = useContext(LocationContext)
 
         const [saveTrack] = useSaveTrack();
-
 
     return (
         <View>

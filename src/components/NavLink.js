@@ -15,7 +15,6 @@ const NavLink = ({navigation,text,routeName}) => {
     )
 }
 const styles = StyleSheet.create({
-
 })
 
 export default withNavigation(NavLink)

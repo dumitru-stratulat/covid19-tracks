@@ -40,7 +40,6 @@ const signup = (dispatch) => async ({ email, password },callback) => {
         dispatch({ type: 'add_error', payload: 'Something went wrong with signup' })
     }
 }
-
 const signin = (dispatch) => async ({ email, password }) => {
     try {
         const response = await trackerApi.post('/signin',{ email,password})
@@ -56,7 +55,6 @@ const signout = dispatch => async ()=>{
     dispatch({type: 'signout'})
     navigate('loginFlow')
 }
-
 
 export const {Context,Provider} = createDataContext(
     authReducer,

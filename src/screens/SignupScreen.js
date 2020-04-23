@@ -1,9 +1,6 @@
 import React,{  useContext } from 'react'
-import { View, StyleSheet,TouchableOpacity } from 'react-native'
+import { View, StyleSheet } from 'react-native'
 import {NavigationEvents} from 'react-navigation'
-import { Text, Input, Button} from  'react-native-elements'
-import Spacer from '../components/Spacer'
-import SigninScreen from './SigninScreen';
 import AuthForm from '../components/AuthForm'
 import NavLink from '../components/NavLink'
 import {Context as AuthContext} from '../context/AuthContext'

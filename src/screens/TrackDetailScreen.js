@@ -23,6 +23,7 @@ const TrackDetailScreen = ({navigation}) => {
             >
                 <Polyline
                     coordinates={track.locations.map(loc => loc.coords)}
+                    strokeWidth={4}
                 />
             </MapView>
         </View>
