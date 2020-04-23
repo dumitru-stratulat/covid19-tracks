@@ -8,7 +8,7 @@ import Map from '../components/Map'
 import {Context as LocationContext } from '../context/LocationContext'
 import useLocation from '../hooks/useLocation'
 import TrackForm from '../components/TrackForm'
-
+import { MaterialCommunityIcons } from '@expo/vector-icons'
 
 const TrackCreateScreen = ({isFocused}) => {
     const { state:{recording},addLocation } = useContext(LocationContext)
@@ -25,6 +25,11 @@ const TrackCreateScreen = ({isFocused}) => {
             <TrackForm/>
         </SafeAreaView>
     )
+}
+
+TrackCreateScreen.navigationOptions = {
+    title: 'Add track',
+    tabBarIcon: <MaterialCommunityIcons name="map-plus" size={25} />
 }
 const styles = StyleSheet.create({
     
